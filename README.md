@@ -8,9 +8,8 @@ This repository contains R scripts to visualize and analyze Voriconazole serum c
 
 ## Purpose
 
-This repository aims to provide tools for the following:
-- **Visualize** Voriconazole serum concentrations and dosing regimens in patients post-liver transplant.
-- **Understand** the relationship between Voriconazole dose and serum concentration.
+This repository aims for the following:
+- **Visualize** Voriconazole serum concentrations and dosing regimens in patients pre and post-liver transplant.
 - **Examine** the distribution of serum concentration against therapeutic goals (1-4 µg/mL).
 
 ## Required Libraries
@@ -20,8 +19,3 @@ These R packages are required for data processing and visualization:
 - `readxl` - For reading Excel files.
 - `ggplot2` - For creating plots (violin, scatter, boxplot).
 - `dplyr` - For data manipulation.
-
-You can install the required packages using:
-
-```r
-install.packages(c("readxl", "ggplot2", "dplyr"))
