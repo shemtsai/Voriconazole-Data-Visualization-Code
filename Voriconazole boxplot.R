@@ -7,6 +7,9 @@ library(readxl)  # For reading Excel files
 file_path <- file.choose()  # Choose your file
 data <- read_excel(file_path)  # Load data from the Excel file
 
+# Filter out post-transplant values
+data <- data %>% filter(`Pre/Post level` != "Post")
+
 # Step 3: Convert columns to numeric where necessary
 data$VoriDose <- as.numeric(data$VoriDose)  # Convert VoriDose to numeric
 data <- data %>% filter(VoriDose != 0)  # Remove rows with VoriDose = 0
