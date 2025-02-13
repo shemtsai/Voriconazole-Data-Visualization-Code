@@ -27,10 +27,6 @@ data$`Pre/Post Liver TPX` <- factor(data$`Pre/Post Liver TPX`, levels = c("Pre",
 
 # Step 6: Create a violin plot with DoseBins on the x-axis and Pre/Post liver transplant status as fill
 ggplot(data, aes(x = DoseBin, y = VoriLvlValue, fill = `Pre/Post Liver TPX`)) +
-  # Background shading for therapeutic range
-  geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = 1), fill = "red", alpha = 0.005) +  # Below 1 is red
-  geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = 4, ymax = Inf), fill = "red", alpha = 0.005) +  # Above 4 is red
-  geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = 1, ymax = 4), fill = "green", alpha = 0.005) +  # Therapeutic range
 
   # Violin plot with thicker outline
   geom_violin(trim = FALSE, position = position_dodge(width = 0.8), size = 1.2, color = "black") +  
